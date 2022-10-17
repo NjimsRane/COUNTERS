@@ -1,0 +1,101 @@
+*,*::before,*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing:inherit;
+}
+html{
+    font-size:62.5%;
+    box-sizing:border-box;
+}
+:root{
+    --fnt-color:hsl(225, 37%, 20%);
+    --fnt-color2:hsl(225, 37%, 33%);
+    --bg-color:#DDE1E7;
+    --decrease-color:hsl(348, 83%, 47%);
+    --decrease-color2:hsl(348, 83%, 60%);
+    --increase-color:hsl(172, 68%, 37%);
+    --increase-color2:hsl(172, 68%, 50%);
+
+}
+body{
+    min-height:100vh;
+    background-color:var(--bg-color);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    
+
+    main{
+        width:100%;
+        text-align:center;
+        padding:0 1em;
+
+        .container{
+            width:100%;
+            margin-inline:auto;
+            max-width:40em;
+            background-color:var(--bg-color);
+            box-shadow:0 5px 10px 0 rgba(0,0,0,0.4);
+            border-radius:3px;
+            padding-block:1em;
+
+            color:var(--fnt-color);
+            font-family:Arial, Helvetica, sans-serif;
+
+            h1{
+                font-size:2rem;
+            }
+            p{
+                margin-block:0.2em;
+                font-size:5rem;
+            }
+            .btnContainer{
+                display:flex;
+                justify-content: center;
+                align-items:center;
+                gap:1em;
+
+                .btn{
+                    font-size:1.5rem;
+                    padding:0.4em ;
+                    text-transform:uppercase;
+                    border:none;
+                    box-shadow:2px 2px 6px 0 rgba(0,0,0,0.7);
+                    cursor: pointer;
+                    outline:none;
+                    border-radius:4px;
+
+                   color:var(--bg-color);
+                   font-weight:600;
+                   &:active{
+                    box-shadow:unset;
+
+                   transition: all 0.5s;
+
+                  
+                   }
+                }
+                .increase{
+                    background-color:var(--increase-color2);
+                    &:hover{
+                        background-color:var(--increase-color);
+                       }
+                    
+                }
+                .decrease{
+                    background-color:var(--decrease-color2);
+                    &:hover{
+                        background-color:var(--decrease-color);
+                       }
+                }
+                .reset{
+                    background-color:var(--fnt-color2);
+                    &:hover{
+                        background-color:var(--fnt-color);
+                       }
+                }
+            }
+        }
+    }
+}
